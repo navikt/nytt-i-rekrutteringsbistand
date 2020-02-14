@@ -1,0 +1,54 @@
+{
+    "name": "nytt-i-rekrutteringsbistand",
+    "version": "1.0.0",
+    "description": "Vis endringer og andre nyheter i Rekrutteringsbistand-appene",
+    "author": "NAVIKT",
+    "license": "MIT",
+    "main": "lib/Nytt.js",
+    "types": "lib/Nytt.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/navikt/nytt-i-rekrutteringsbistand.git"
+    },
+    "files": [
+        "lib",
+        "src/nytt"
+    ],
+    "scripts": {
+        "start:parcel": "parcel src/index.html --open --port 8000",
+        "start:ts": "tsc --watch",
+        "start": "run-p start:parcel start:ts",
+        "build:webpack": "webpack",
+        "build:declarations": "tsc --project tsconfig.build.json",
+        "build": "run-s build:webpack build:declarations"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.4",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+        "@babel/preset-env": "^7.8.4",
+        "@babel/preset-react": "^7.8.3",
+        "@babel/preset-typescript": "^7.8.3",
+        "@types/react": "^16.9.19",
+        "babel-loader": "^8.0.6",
+        "core-js": "^3.6.4",
+        "css-loader": "^3.4.2",
+        "less": "^3.11.1",
+        "less-loader": "^5.0.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "npm-run-all": "^4.1.5",
+        "parcel-bundler": "^1.12.4",
+        "postcss-loader": "^3.0.0",
+        "postcss-prefix-selector": "^1.7.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "typescript": "^3.7.5",
+        "webpack": "^4.41.6",
+        "webpack-cli": "^3.3.11"
+    },
+    "browserslist": [
+        "> 1% in NO",
+        "not ie 11"
+    ]
+}
