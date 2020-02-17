@@ -1,11 +1,9 @@
 import React, { FunctionComponent, ReactNode, useState } from 'react';
-import { Normaltekst, Undertittel, Element, EtikettLiten } from 'nav-frontend-typografi';
+import { Element } from 'nav-frontend-typografi';
 import Popover, { PopoverOrientering } from 'nav-frontend-popover';
+
+import Artikkel from './Artikkel';
 import './Nytt.less';
-
-const ANKER = 'nytt-anker';
-
-const printDato = (dato: Date) => dato.toLocaleDateString();
 
 export type Nyhet = {
     dato: Date;
@@ -25,7 +23,7 @@ const Nytt: FunctionComponent<Props> = ({ nyheter }) => {
     };
 
     return (
-        <div id={ANKER} className="nytt">
+        <div className="nytt">
             <button onClick={onNotifikasjonClick} className="nytt__notifikasjon">
                 Nytt
             </button>
@@ -41,17 +39,7 @@ const Nytt: FunctionComponent<Props> = ({ nyheter }) => {
                     </Element>
                     <section className="nytt__nyheter">
                         {nyheter.map((nyhet) => (
-                            <article
-                                key={nyhet.dato.toISOString + nyhet.tittel}
-                                className="nytt__artikkel">
-                                <EtikettLiten className="nytt__artikkeldato">
-                                    {printDato(nyhet.dato)}
-                                </EtikettLiten>
-                                <Undertittel className="nytt__artikkeltittel">
-                                    {nyhet.tittel}
-                                </Undertittel>
-                                <Normaltekst>{nyhet.innhold}</Normaltekst>
-                            </article>
+                            <Artikkel key={`${nyhet.dato}-${nyhet.tittel}`} nyhet={nyhet} />
                         ))}
                     </section>
                 </div>
