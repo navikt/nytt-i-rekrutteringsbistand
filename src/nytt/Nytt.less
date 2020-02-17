@@ -1,0 +1,52 @@
+.nytt {
+    color: rgb(62, 56, 50);
+
+    &__notifikasjon {
+        display: inline-block;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .popover {
+        border: none;
+        box-shadow: none;
+        margin: 1rem;
+        border-radius: 0.6rem;
+
+        &:focus {
+            box-shadow: 0 0 0 3px #3e3832;
+        }
+    }
+
+    &__popover {
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 0.25rem 0 rgba(62, 56, 50, 0.125);
+        max-width: 27rem;
+    }
+
+    &__tittel {
+        color: white;
+        text-align: center;
+        background-color: #3e3832;
+        border-radius: 0.5rem 0.5rem 0 0;
+        padding: 1.5rem 1.5rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    &__nyheter {
+        max-height: 30rem;
+        overflow-y: scroll;
+    }
+
+    &__artikkel {
+        padding: 1rem 2rem;
+    }
+
+    &__artikkel:not(:last-child) {
+        border-bottom: 1px solid lightgray;
+    }
+
+    &__artikkeltittel {
+        margin-bottom: 0.125rem;
+    }
+}
