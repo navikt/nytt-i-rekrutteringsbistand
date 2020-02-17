@@ -31,6 +31,7 @@
         "@babel/preset-react": "^7.8.3",
         "@babel/preset-typescript": "^7.8.3",
         "@types/react": "^16.9.19",
+        "@types/react-dom": "^16.9.5",
         "babel-loader": "^8.0.6",
         "core-js": "^3.6.4",
         "css-loader": "^3.4.2",
@@ -50,5 +51,11 @@
     "browserslist": [
         "> 1% in NO",
         "not ie 11"
-    ]
+    ],
+    "dependencies": {
+        "classnames": "^2.2.6",
+        "nav-frontend-core": "^4.0.11",
+        "nav-frontend-typografi": "^2.0.17",
+        "nav-frontend-typografi-style": "^1.0.18"
+    }
 }

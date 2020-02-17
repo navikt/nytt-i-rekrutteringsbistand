@@ -1,7 +1,28 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
+import { Normaltekst, Undertittel } from 'nav-frontend-typografi';
 
-const Nytt: FunctionComponent = () => {
-    return <div>Nytt</div>;
+export type Nyhet = {
+    tittel: string;
+    innhold: ReactNode;
+};
+
+type Props = {
+    nyheter: Nyhet[];
+};
+
+const Nytt: FunctionComponent<Props> = (props) => {
+    const { nyheter } = props;
+    return (
+        <div>
+            <i>Nytt</i>
+            {nyheter.map((nyhet) => (
+                <article>
+                    <Undertittel>{nyhet.tittel}</Undertittel>
+                    <Normaltekst>{nyhet.innhold}</Normaltekst>
+                </article>
+            ))}
+        </div>
+    );
 };
 
 export default Nytt;
