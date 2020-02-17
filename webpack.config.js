@@ -4,7 +4,7 @@ const prefixer = require('postcss-prefix-selector');
 
 module.exports = {
     mode: 'production',
-    entry: './src/nytt/Nytt.tsx',
+    entry: './src/nytt/NyttIRekrutteringsbistand.tsx',
 
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.less', '.css']

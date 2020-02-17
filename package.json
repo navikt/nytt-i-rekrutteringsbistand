@@ -1,11 +1,11 @@
 {
-    "name": "nytt-i-rekrutteringsbistand",
+    "name": "@navikt/nytt-i-rekrutteringsbistand",
     "version": "1.0.0",
     "description": "Vis endringer og andre nyheter i Rekrutteringsbistand-appene",
     "author": "NAVIKT",
     "license": "MIT",
-    "main": "lib/Nytt.js",
-    "types": "lib/Nytt.d.ts",
+    "main": "lib/NyttIRekrutteringsbistand.js",
+    "types": "lib/NyttIRekrutteringsbistand.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/navikt/nytt-i-rekrutteringsbistand.git"

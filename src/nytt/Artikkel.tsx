@@ -2,7 +2,14 @@ import React, { FunctionComponent } from 'react';
 import { Nyhet } from './Nytt';
 import { EtikettLiten, Undertittel, Normaltekst } from 'nav-frontend-typografi';
 
-const printDato = (dato: Date) => dato.toLocaleDateString();
+const printDato = (dato: Date) =>
+    dato.toLocaleDateString
+        ? dato.toLocaleDateString('no-NB', {
+              day: 'numeric',
+              month: 'short',
+              year: 'numeric'
+          })
+        : dato.toISOString();
 
 interface Props {
     nyhet: Nyhet;
