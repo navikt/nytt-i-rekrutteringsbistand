@@ -1,9 +1,10 @@
-import React, { FunctionComponent, ReactNode, useState } from 'react';
+import React, { FunctionComponent, ReactNode, useState, useEffect } from 'react';
 import { Element } from 'nav-frontend-typografi';
 import Popover, { PopoverOrientering } from 'nav-frontend-popover';
 
 import Artikkel from './Artikkel';
 import './Nytt.less';
+import useHarUlesteNyheter from './useHarUlesteNyheter';
 
 export type Nyhet = {
     dato: Date;
@@ -16,22 +17,43 @@ type Props = {
 };
 
 const Nytt: FunctionComponent<Props> = ({ nyheter }) => {
-    const [anker, setAnker] = useState<HTMLElement | undefined>();
+    const [popoverAnker, setPopoverAnker] = useState<HTMLElement | undefined>();
+    const [erÅpnet, setErÅpnet] = useState<boolean>(false);
+    const [harUlesteNyheter, markerSomLest] = useHarUlesteNyheter(nyheter);
 
     const onNotifikasjonClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-        setAnker(anker ? undefined : e.currentTarget);
+        if (popoverAnker) {
+            setPopoverAnker(undefined);
+        } else {
+            setPopoverAnker(e.currentTarget);
+            if (!erÅpnet) {
+                setErÅpnet(true);
+            }
+        }
     };
+
+    useEffect(() => {
+        if (erÅpnet) {
+            markerSomLest();
+        }
+    }, [erÅpnet]);
 
     return (
         <div className="nytt">
-            <button onClick={onNotifikasjonClick} className="nytt__notifikasjon">
-                Nytt
+            <button onClick={onNotifikasjonClick} className="nytt__knapp">
+                <svg
+                    className="nytt__ikon"
+                    viewBox="0 0 100 100"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50px" cy="50px" r="50px" fill="#3e3832" />
+                </svg>
+                {harUlesteNyheter === true && <div className="nytt__notifikasjon" />}
             </button>
             <Popover
                 utenPil
-                ankerEl={anker}
+                ankerEl={popoverAnker}
                 avstandTilAnker={16}
-                onRequestClose={() => setAnker(undefined)}
+                onRequestClose={() => setPopoverAnker(undefined)}
                 orientering={PopoverOrientering.Under}>
                 <div className="nytt__popover">
                     <Element tag="h2" className="nytt__tittel">
