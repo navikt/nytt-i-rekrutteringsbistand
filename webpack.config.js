@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const prefixer = require('postcss-prefix-selector');
 
 module.exports = {
     mode: 'production',
@@ -13,7 +12,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'lib'),
         publicPath: '/lib/',
-        filename: 'Nytt.js',
+        filename: 'NyttIRekrutteringsbistand.js',
         libraryTarget: 'commonjs2'
     },
 
@@ -29,22 +28,7 @@ module.exports = {
             },
             {
                 test: /\.(css|less)$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: () => [
-                                prefixer({
-                                    prefix: '.nytt',
-                                    exclude: ['.nytt']
-                                })
-                            ]
-                        }
-                    },
-                    'less-loader'
-                ]
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
             }
         ]
     },
