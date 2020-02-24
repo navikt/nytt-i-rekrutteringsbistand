@@ -1,21 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import Nytt from './Nytt';
 
+const tilDato = (dag: number, måned: number, år: number) => new Date(år, måned - 1, dag);
+
 const nyheter = [
     {
-        dato: new Date(),
-        tittel: 'Dette er en nyhet!',
-        innhold: 'Dette er litt innhold!'
-    },
-    {
-        dato: new Date(),
-        tittel: 'Dette er enda en nyhet!',
-        innhold: (
-            <span>
-                Litt annerledes innhold her. Kanskje litt lengre tekst, til og med. Også kommer det
-                plutselig <a href="www.nrk.no">en lenke</a>!
-            </span>
-        )
+        dato: tilDato(23, 2, 2020),
+        tittel: 'Vi har nå lansert endringsloggen!',
+        innhold: 'Her vil du få oversikt over nyheter og endringer i Rekrutteringsbistand.'
     }
 ];
 
