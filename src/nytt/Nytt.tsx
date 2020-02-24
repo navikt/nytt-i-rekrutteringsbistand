@@ -47,7 +47,7 @@ const Nytt: FunctionComponent<Props> = ({ nyheter }) => {
                     xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50px" cy="50px" r="50px" fill="#3e3832" />
                 </svg>
-                {harUlesteNyheter === true && <div className="nytt__notifikasjon" />}
+                {harUlesteNyheter && <div className="nytt__notifikasjon" />}
             </button>
             <Popover
                 utenPil

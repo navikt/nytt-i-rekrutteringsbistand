@@ -11,8 +11,8 @@ const hentHarUlesteNyheter = (nyheter: Nyhet[], sistLest: Date) => {
 
 const LOCAL_STORAGE_KEY = 'sistLest';
 
-const useHarUlesteNyheter = (nyheter: Nyhet[]): [boolean | undefined, () => void] => {
-    const [harUlesteNyheter, setHarUlesteNyheter] = useState<boolean | undefined>(undefined);
+const useHarUlesteNyheter = (nyheter: Nyhet[]): [boolean, () => void] => {
+    const [harUlesteNyheter, setHarUlesteNyheter] = useState<boolean>(false);
 
     useEffect(() => {
         try {
