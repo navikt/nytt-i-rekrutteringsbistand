@@ -1,10 +1,32 @@
 .nytt {
     color: rgb(62, 56, 50);
 
+    &__knapp {
+        background: none;
+        border: none;
+        padding: 0.25rem;
+        position: relative;
+        border-radius: 0.125rem;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2.5px #254b6d;
+        }
+    }
+
     &__notifikasjon {
-        display: inline-block;
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+        position: absolute;
+        top: 0.25rem;
+        right: 0;
+        height: 0.9rem;
+        width: 0.9rem;
+        border-radius: 50%;
+        background-color: skyblue;
+    }
+
+    &__ikon {
+        height: 2.5rem;
+        width: 2.5rem;
     }
 
     .popover {
