@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { PopoverOrientering } from 'nav-frontend-popover';
+import { PopoverProps } from 'nav-frontend-popover';
 import Nytt from './Nytt';
 
 const tilDato = (dag: number, måned: number, år: number) => new Date(år, måned - 1, dag);
@@ -12,12 +12,10 @@ const nyheter = [
     }
 ];
 
-const NyttIRekrutteringsbistand: FunctionComponent = () => (
-    <Nytt
-        navn="Rekrutteringsbistand"
-        nyheter={nyheter}
-        orientering={PopoverOrientering.UnderVenstre}
-    />
+type Props = Partial<PopoverProps>;
+
+const NyttIRekrutteringsbistand: FunctionComponent = (popoverProps: Props) => (
+    <Nytt navn="Rekrutteringsbistand" nyheter={nyheter} {...popoverProps} />
 );
 
 export default NyttIRekrutteringsbistand;
