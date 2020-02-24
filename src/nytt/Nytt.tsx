@@ -5,6 +5,7 @@ import Popover, { PopoverOrientering } from 'nav-frontend-popover';
 import Artikkel from './Artikkel';
 import './Nytt.less';
 import useHarUlesteNyheter from './useHarUlesteNyheter';
+import Ikon from './Ikon';
 
 export type Nyhet = {
     dato: Date;
@@ -13,10 +14,11 @@ export type Nyhet = {
 };
 
 type Props = {
+    navn: string;
     nyheter: Nyhet[];
 };
 
-const Nytt: FunctionComponent<Props> = ({ nyheter }) => {
+const Nytt: FunctionComponent<Props> = ({ navn, nyheter }) => {
     const [popoverAnker, setPopoverAnker] = useState<HTMLElement | undefined>();
     const [erÅpnet, setErÅpnet] = useState<boolean>(false);
     const [harUlesteNyheter, markerSomLest] = useHarUlesteNyheter(nyheter);
@@ -41,12 +43,7 @@ const Nytt: FunctionComponent<Props> = ({ nyheter }) => {
     return (
         <div className="nytt">
             <button onClick={onNotifikasjonClick} className="nytt__knapp">
-                <svg
-                    className="nytt__ikon"
-                    viewBox="0 0 100 100"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50px" cy="50px" r="50px" fill="#3e3832" />
-                </svg>
+                <Ikon navn={navn} />
                 {harUlesteNyheter && <div className="nytt__notifikasjon" />}
             </button>
             <Popover
@@ -57,7 +54,7 @@ const Nytt: FunctionComponent<Props> = ({ nyheter }) => {
                 orientering={PopoverOrientering.Under}>
                 <div className="nytt__popover">
                     <Element tag="h2" className="nytt__tittel">
-                        Nytt fra rekrutteringsbistand
+                        Nytt fra {navn}
                     </Element>
                     <section className="nytt__nyheter">
                         {nyheter.map((nyhet) => (

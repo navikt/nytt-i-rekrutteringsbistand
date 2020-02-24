@@ -19,6 +19,8 @@ const nyheter = [
     }
 ];
 
-const NyttIRekrutteringsbistand: FunctionComponent = () => <Nytt nyheter={nyheter} />;
+const NyttIRekrutteringsbistand: FunctionComponent = () => (
+    <Nytt navn="Rekrutteringsbistand" nyheter={nyheter} />
+);
 
 export default NyttIRekrutteringsbistand;
