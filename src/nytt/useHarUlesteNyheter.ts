@@ -20,6 +20,8 @@ const useHarUlesteNyheter = (nyheter: Nyhet[]): [boolean, () => void] => {
             if (localStorageValue) {
                 const sistLestFraLocalStorage = new Date(JSON.parse(localStorageValue));
                 setHarUlesteNyheter(hentHarUlesteNyheter(nyheter, sistLestFraLocalStorage));
+            } else {
+                setHarUlesteNyheter(true);
             }
         } catch (error) {
             console.error('Kunne ikke hente fra local storage:', error);
