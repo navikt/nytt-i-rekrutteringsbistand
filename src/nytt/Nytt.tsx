@@ -54,7 +54,7 @@ const Nytt: FunctionComponent<Props> = ({ navn, nyheter }) => {
                 orientering={PopoverOrientering.Under}>
                 <div className="nytt__popover">
                     <Element tag="h2" className="nytt__tittel">
-                        Nytt fra {navn}
+                        Nytt i {navn}
                     </Element>
                     <section className="nytt__nyheter">
                         {nyheter.map((nyhet) => (
