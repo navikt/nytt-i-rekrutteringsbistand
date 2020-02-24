@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode, useState, useEffect } from 'react';
 import { Element } from 'nav-frontend-typografi';
-import Popover, { PopoverOrientering } from 'nav-frontend-popover';
+import Popover, { PopoverOrientering, PopoverProps } from 'nav-frontend-popover';
 
 import Artikkel from './Artikkel';
 import './Nytt.less';
@@ -13,12 +13,12 @@ export type Nyhet = {
     innhold: ReactNode;
 };
 
-type Props = {
+interface Props extends Partial<PopoverProps> {
     navn: string;
     nyheter: Nyhet[];
-};
+}
 
-const Nytt: FunctionComponent<Props> = ({ navn, nyheter }) => {
+const Nytt: FunctionComponent<Props> = ({ navn, nyheter, ...popoverProps }) => {
     const [popoverAnker, setPopoverAnker] = useState<HTMLElement | undefined>();
     const [erÅpnet, setErÅpnet] = useState<boolean>(false);
     const [harUlesteNyheter, markerSomLest] = useHarUlesteNyheter(nyheter);
@@ -51,7 +51,8 @@ const Nytt: FunctionComponent<Props> = ({ navn, nyheter }) => {
                 ankerEl={popoverAnker}
                 avstandTilAnker={16}
                 onRequestClose={() => setPopoverAnker(undefined)}
-                orientering={PopoverOrientering.Under}>
+                orientering={PopoverOrientering.Under}
+                {...popoverProps}>
                 <div className="nytt__popover">
                     <Element tag="h2" className="nytt__tittel">
                         Nytt i {navn}

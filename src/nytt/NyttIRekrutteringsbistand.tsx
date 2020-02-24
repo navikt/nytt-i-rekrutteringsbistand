@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import { PopoverOrientering } from 'nav-frontend-popover';
 import Nytt from './Nytt';
 
 const tilDato = (dag: number, måned: number, år: number) => new Date(år, måned - 1, dag);
@@ -12,7 +13,11 @@ const nyheter = [
 ];
 
 const NyttIRekrutteringsbistand: FunctionComponent = () => (
-    <Nytt navn="Rekrutteringsbistand" nyheter={nyheter} />
+    <Nytt
+        navn="Rekrutteringsbistand"
+        nyheter={nyheter}
+        orientering={PopoverOrientering.UnderVenstre}
+    />
 );
 
 export default NyttIRekrutteringsbistand;
