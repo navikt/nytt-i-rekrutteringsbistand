@@ -47,7 +47,6 @@ const Nytt: FunctionComponent<Props> = ({ navn, nyheter, ...popoverProps }) => {
                 {harUlesteNyheter && <div className="nytt__notifikasjon" />}
             </button>
             <Popover
-                utenPil
                 ankerEl={popoverAnker}
                 avstandTilAnker={16}
                 onRequestClose={() => setPopoverAnker(undefined)}
