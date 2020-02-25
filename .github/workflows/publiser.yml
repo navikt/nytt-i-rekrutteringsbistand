@@ -1,0 +1,34 @@
+name: Publiser
+
+on:
+  push:
+    tags: /^v.*/
+
+jobs:
+  build:
+    name: Bygg og publiser
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+  
+    - name: Sett opp Node
+      uses: actions/setup-node@v1
+      with:
+        scope: '@navikt'
+        always-auth: true
+        node-version: '12.x'
+        registry-url: https://registry.npmjs.org
+
+    - name: Installer avhengigheter
+      run: npm ci
+    
+    - name: Bygg pakke
+      run: npm run build
+
+    - name: Publiser pakke
+      run: npm publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      
