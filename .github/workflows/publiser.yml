@@ -1,11 +1,9 @@
 name: Publiser
 
 on:
-  release:
-    types:
-      - created
-      - published
-      - edited
+  push:
+    tags:
+      - v*
 
 jobs:
   build:
