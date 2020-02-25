@@ -11,16 +11,21 @@ const hentHarUlesteNyheter = (nyheter: Nyhet[], sistLest: Date) => {
 
 const LOCAL_STORAGE_KEY = 'sistLest';
 
-const useHarUlesteNyheter = (nyheter: Nyhet[]): [boolean, () => void] => {
+const useHarUlesteNyheter = (
+    nyheter: Nyhet[],
+    onFørsteBesøk: () => void
+): [boolean, () => void] => {
     const [harUlesteNyheter, setHarUlesteNyheter] = useState<boolean>(false);
 
     useEffect(() => {
         try {
             const localStorageValue = window.localStorage.getItem(LOCAL_STORAGE_KEY);
+
             if (localStorageValue) {
                 const sistLestFraLocalStorage = new Date(JSON.parse(localStorageValue));
                 setHarUlesteNyheter(hentHarUlesteNyheter(nyheter, sistLestFraLocalStorage));
             } else {
+                onFørsteBesøk();
                 setHarUlesteNyheter(true);
             }
         } catch (error) {
