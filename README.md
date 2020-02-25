@@ -13,20 +13,11 @@ npm install @navikt/nytt-i-rekrutteringsbistand
 ### Importer komponenten og CSS
 
 ```js
-import Nytt from '@navikt/nytt-i-rekrutteringsbistand';
+import NyttIRekrutteringsbistand from '@navikt/nytt-i-rekrutteringsbistand';
 import '../node_modules/@navikt/nytt-i-rekrutteringsbistand/lib/nytt.css';
 ```
 
 Du er selv ansvarlig for å importere `nav-frontend-core` i din egen app. Nytt-i-rekrutteringsbistand antar at CSS-klasser og Less-variabler fra denne pakken er tilgjengelige.
-
-### Render komponenten øverst i applikasjonen
-
-```jsx
-<div>
-    <Nytt />
-    /* Resten av applikasjonen */
-</div>
-```
 
 ## Utvikling
 
@@ -37,13 +28,12 @@ npm start
 
 ## Publisering på NPM
 
-Alle commits vil bygges og testes på CircleCI. Commits som er tagget med en ny versjon ("vX.Y.Z") vil publiseres til NPM, men disse krever en manuell godkjenning i CircleCI først. Oppskriften på å publisere ny versjon blir dermed:
+Taggede commits (`vX.Y.Z`) vil publiseres til NPM med Github Actions. For å opprette en tagget commit:
 
-1. Commit endringene dine som vanlig.
-3. Oppgrader versjonsnummer i package.json med `npm version patch/minor/major`. (se https://docs.npmjs.com/cli/version). Dette oppretter en ny commit med det nye versjonsnummeret som commit message, og oppretter samtidig en tilhørende tag.
-2. Push de to siste commitene du nettopp opprettet.
-4. Push den nye taggen (typ `git push origin vX.Y.Z`. Se `git tag` for liste over alle tagsene dine). _Dette trigger en publisering (med godkjenning) hos CircleCI_.
-5. Hvis byggingen gikk fint (sjekk https://circleci.com/gh/navikt/workflows/nytt-i-rekrutteringsbistand) kan du godkjenne publiseringen. Da vil den nye versjonen snart ligge på NPM!
+1. Oppgrader versjonsnummeret i package.json med `npm version patch/minor/major` (se https://docs.npmjs.com/cli/version). Bruk patch for små, non-breaking changes, minor for breaking changes og major for store oppgraderinger.
+2. Push den nye taggen (typ `git push origin vX.Y.Z`. Se `git tag` for liste over alle tagsene dine). _Dette trigger en publisering på Github Actions_.
+
+Se [Workflows på GitHub](https://github.com/navikt/nytt-i-rekrutteringsbistand/actions) for byggstatus og [@navikt/nytt-i-rekrutteringsbistand på NPM](https://www.npmjs.com/package/@navikt/nytt-i-rekrutteringsbistand) for å sjekke om pakken ble publisert.
 
 ## Stack
 
