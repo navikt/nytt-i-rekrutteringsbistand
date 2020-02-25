@@ -15,7 +15,7 @@ const nyheter = [
 type Props = Partial<PopoverProps>;
 
 const NyttIRekrutteringsbistand: FunctionComponent<Props> = (popoverProps: Props) => (
-    <Nytt navn="Rekrutteringsbistand" nyheter={nyheter} {...popoverProps} />
+    <Nytt åpneVedFørsteBesøk navn="Rekrutteringsbistand" nyheter={nyheter} {...popoverProps} />
 );
 
 export default NyttIRekrutteringsbistand;

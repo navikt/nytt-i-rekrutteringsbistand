@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode, useState, useEffect } from 'react';
+import React, { FunctionComponent, ReactNode, useState, useEffect, useRef } from 'react';
 import { Element } from 'nav-frontend-typografi';
 import Popover, { PopoverOrientering, PopoverProps } from 'nav-frontend-popover';
 
@@ -16,18 +16,30 @@ export type Nyhet = {
 interface Props extends Partial<PopoverProps> {
     navn: string;
     nyheter: Nyhet[];
+    åpneVedFørsteBesøk?: boolean;
 }
 
-const Nytt: FunctionComponent<Props> = ({ navn, nyheter, ...popoverProps }) => {
+const Nytt: FunctionComponent<Props> = (props) => {
+    const { navn, nyheter, åpneVedFørsteBesøk = false, ...popoverProps } = props;
+
     const [popoverAnker, setPopoverAnker] = useState<HTMLElement | undefined>();
     const [erÅpnet, setErÅpnet] = useState<boolean>(false);
-    const [harUlesteNyheter, markerSomLest] = useHarUlesteNyheter(nyheter);
+    const buttonRef = useRef<HTMLButtonElement>(null);
 
-    const onNotifikasjonClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    const onFørsteBesøk = () => {
+        if (åpneVedFørsteBesøk) {
+            toggleNyheter();
+        }
+    };
+
+    const [harUlesteNyheter, markerSomLest] = useHarUlesteNyheter(nyheter, onFørsteBesøk);
+
+    const toggleNyheter = () => {
         if (popoverAnker) {
             setPopoverAnker(undefined);
-        } else {
-            setPopoverAnker(e.currentTarget);
+        } else if (buttonRef.current) {
+            setPopoverAnker(buttonRef.current);
+
             if (!erÅpnet) {
                 setErÅpnet(true);
             }
@@ -42,7 +54,7 @@ const Nytt: FunctionComponent<Props> = ({ navn, nyheter, ...popoverProps }) => {
 
     return (
         <div className="nytt">
-            <button onClick={onNotifikasjonClick} className="nytt__knapp">
+            <button ref={buttonRef} onClick={toggleNyheter} className="nytt__knapp">
                 <Ikon navn={navn} />
                 {harUlesteNyheter && <div className="nytt__notifikasjon" />}
             </button>
