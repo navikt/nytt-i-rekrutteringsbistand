@@ -14,7 +14,7 @@ const nyheter = [
 
 type Props = Partial<PopoverProps>;
 
-const NyttIRekrutteringsbistand: FunctionComponent = (popoverProps: Props) => (
+const NyttIRekrutteringsbistand: FunctionComponent<Props> = (popoverProps: Props) => (
     <Nytt navn="Rekrutteringsbistand" nyheter={nyheter} {...popoverProps} />
 );
 
