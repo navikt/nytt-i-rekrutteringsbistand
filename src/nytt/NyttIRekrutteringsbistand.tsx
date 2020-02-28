@@ -6,6 +6,12 @@ const tilDato = (dag: number, måned: number, år: number) => new Date(år, mån
 
 const nyheter = [
     {
+        dato: tilDato(28, 2, 2020),
+        tittel: 'Enklere å skrive et notat',
+        innhold:
+            'Nå blir det enklere å skrive et notat om hvorfor brukeren passer til stillingen. Når du legger til en kandidat på en kandidatliste, får du mulighet til å opprette et notat.'
+    },
+    {
         dato: tilDato(26, 2, 2020),
         tittel: 'Endring av fornavn og etternavn',
         innhold:
