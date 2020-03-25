@@ -10,23 +10,20 @@ const nyheter = [
         tittel: 'Nå kan NAV varsle kandidater om stillinger på SMS',
         innhold: (
             <>
-                <p>
-                    Det nå mulig å sende SMS til brukere som er tilknyttet en kandidatliste. Det
-                    gjør at NAV enkelt kan varsle kandidater om stillinger hvor det haster å få
-                    folk. SMS-varsling kan brukes både til offentlig utlyste stillinger og til
-                    stillinger som er meldt direkte til NAV.
-                </p>
-
+                Det nå mulig å sende SMS til brukere som er tilknyttet en kandidatliste. Det gjør at
+                NAV enkelt kan varsle kandidater om stillinger hvor det haster å få folk.
+                SMS-varsling kan brukes både til offentlig utlyste stillinger og til stillinger som
+                er meldt direkte til NAV.
                 <p>
                     I SMS-meldingen vil det være link til den aktuelle stillingen slik at
                     kandidatene raskt kan se på og vurdere stillingen.
                 </p>
-                <p>
-                    Les mer på{' '}
-                    <a href="https://navno.sharepoint.com/sites/intranett-prosjekter-og-utvikling/SitePages/SMS-varsling-til-personbrukere-om-stillinger.aspx">
-                        Navet
-                    </a>
-                </p>
+                Les mer på{' '}
+                <a
+                    href="https://navno.sharepoint.com/sites/intranett-prosjekter-og-utvikling/SitePages/SMS-varsling-til-personbrukere-om-stillinger.aspx"
+                    target="_blank">
+                    Navet
+                </a>
             </>
         )
     },
