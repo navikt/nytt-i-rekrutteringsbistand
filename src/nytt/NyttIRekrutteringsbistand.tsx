@@ -10,7 +10,7 @@ const nyheter = [
         tittel: 'Nå kan NAV varsle kandidater om stillinger på SMS',
         innhold: (
             <>
-                Det nå mulig å sende SMS til brukere som er tilknyttet en kandidatliste. Det gjør at
+                Det er nå mulig å sende SMS til brukere som er tilknyttet en kandidatliste. Det gjør at
                 NAV enkelt kan varsle kandidater om stillinger hvor det haster å få folk.
                 SMS-varsling kan brukes både til offentlig utlyste stillinger og til stillinger som
                 er meldt direkte til NAV.
