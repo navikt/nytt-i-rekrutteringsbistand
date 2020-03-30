@@ -20,7 +20,7 @@ const Artikkel: FunctionComponent<Props> = ({ nyhet }) => {
         <article className="nytt__artikkel">
             <EtikettLiten className="nytt__artikkeldato">{printDato(nyhet.dato)}</EtikettLiten>
             <Undertittel className="nytt__artikkeltittel">{nyhet.tittel}</Undertittel>
-            <Normaltekst>{nyhet.innhold}</Normaltekst>
+            <Normaltekst tag="section">{nyhet.innhold}</Normaltekst>
         </article>
     );
 };
