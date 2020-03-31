@@ -6,12 +6,18 @@ const tilDato = (dag: number, måned: number, år: number) => new Date(år, mån
 
 const nyheter = [
     {
+        dato: tilDato(31, 3, 2020),
+        tittel: 'Kopier lenken til en stilling',
+        innhold:
+            'Nederst på stilling under «Om annonsen» kan du nå kopiere lenken til stillingen. Du kan for eksempel sende den til en aktuell kandidat på e-post eller i dialogen slik at kandidaten kan vurdere om stillingen passer.'
+    },
+    {
         dato: tilDato(26, 3, 2020),
         tittel: 'Nå kan NAV varsle kandidater om stillinger på SMS',
         innhold: (
             <>
-                Det er nå mulig å sende SMS til brukere som er tilknyttet en kandidatliste. Det gjør at
-                NAV enkelt kan varsle kandidater om stillinger hvor det haster å få folk.
+                Det er nå mulig å sende SMS til brukere som er tilknyttet en kandidatliste. Det gjør
+                at NAV enkelt kan varsle kandidater om stillinger hvor det haster å få folk.
                 SMS-varsling kan brukes både til offentlig utlyste stillinger og til stillinger som
                 er meldt direkte til NAV.
                 <p>
