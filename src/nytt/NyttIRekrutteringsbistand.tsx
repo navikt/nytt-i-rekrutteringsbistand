@@ -6,6 +6,12 @@ const tilDato = (dag: number, måned: number, år: number) => new Date(år, mån
 
 const nyheter = [
     {
+        dato: tilDato(2, 4, 2020),
+        tittel: 'Ny toppmeny i Rekrutteringsbistand',
+        innhold:
+            'I Rekrutteringsbistand er det nå samme dekoratør som i Modia personoversikt. Det vil si at du får tilgang til menyknappen og kan velge enhet. Det gjør det lettere å gå mellom de ulike systemene.'
+    },
+    {
         dato: tilDato(31, 3, 2020),
         tittel: 'Nå kan du lettere finne kandidater til viktige bransjer under koronasituasjonen',
         innhold: (
