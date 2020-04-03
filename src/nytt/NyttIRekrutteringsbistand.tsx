@@ -6,6 +6,12 @@ const tilDato = (dag: number, måned: number, år: number) => new Date(år, mån
 
 const nyheter = [
     {
+        dato: tilDato(3, 4, 2020),
+        tittel: 'Rekrutteringsbistand på Yammer',
+        innhold:
+            'Rekrutteringsbistand har egen gruppe på Yammer. Der kan behov for ny eller endret funksjonalitet i verktøyet meldes inn og bli diskutert. Feil i rekrutteringsbistand skal meldes i porten.'
+    },
+    {
         dato: tilDato(2, 4, 2020),
         tittel: 'Ny toppmeny i Rekrutteringsbistand',
         innhold:
