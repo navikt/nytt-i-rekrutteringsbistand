@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Nyhet } from './Nytt';
 
-const hentHarUlesteNyheter = (nyheter: Nyhet[], sistLest: Date) => {
+const brukerHarUlesteNyheter = (nyheter: Nyhet[], antallLesteNyheter: number) => {
     if (nyheter.length === 0) {
         return false;
     }
 
-    return nyheter[0].dato > sistLest;
+    return nyheter.length > antallLesteNyheter;
 };
 
-const LOCAL_STORAGE_KEY = 'sistLest';
+const LOCAL_STORAGE_KEY = 'antallLesteNyheter';
 
 const useHarUlesteNyheter = (
     nyheter: Nyhet[],
@@ -22,8 +22,8 @@ const useHarUlesteNyheter = (
             const localStorageValue = window.localStorage.getItem(LOCAL_STORAGE_KEY);
 
             if (localStorageValue) {
-                const sistLestFraLocalStorage = new Date(JSON.parse(localStorageValue));
-                setHarUlesteNyheter(hentHarUlesteNyheter(nyheter, sistLestFraLocalStorage));
+                const antallLesteFraLocalStorage = Number.parseInt(JSON.parse(localStorageValue));
+                setHarUlesteNyheter(brukerHarUlesteNyheter(nyheter, antallLesteFraLocalStorage));
             } else {
                 onFørsteBesøk();
                 setHarUlesteNyheter(true);
@@ -37,8 +37,8 @@ const useHarUlesteNyheter = (
         setHarUlesteNyheter(false);
 
         try {
-            const sistLest = JSON.stringify(new Date());
-            window.localStorage.setItem(LOCAL_STORAGE_KEY, sistLest);
+            const antallLesteNyheter = JSON.stringify(nyheter.length);
+            window.localStorage.setItem(LOCAL_STORAGE_KEY, antallLesteNyheter);
         } catch (error) {
             console.error('Kunne ikke lagre til local storage:', error);
         }

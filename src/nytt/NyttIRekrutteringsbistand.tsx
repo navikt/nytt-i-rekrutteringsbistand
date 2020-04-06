@@ -7,13 +7,13 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
-        dato: tilDato(6, 4, 2020, 13, 30),
+        dato: tilDato(6, 4, 2020),
         tittel: 'Nå kan du slette kandidater fra en kandidatliste',
         innhold:
             'Kandidater som slettes blir arkivert, og du kan enkelt søke frem en oversikt over hvilke kandidater som er slettet. Det er også mulig å angre sletting, og flytte kandidaten tilbake på kandidatlisten.',
     },
     {
-        dato: tilDato(3, 4, 2020, 16),
+        dato: tilDato(3, 4, 2020),
         tittel: 'Rekrutteringsbistand på Yammer',
         innhold:
             'Rekrutteringsbistand har egen gruppe på Yammer. Der kan behov for ny eller endret funksjonalitet i verktøyet meldes inn og bli diskutert. Feil i rekrutteringsbistand skal meldes i porten.',
