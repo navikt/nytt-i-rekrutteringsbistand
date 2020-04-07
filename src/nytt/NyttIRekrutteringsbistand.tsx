@@ -7,6 +7,12 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(7, 4, 2020),
+        tittel: 'Nå kan du filtrere på permitterte i kandidatsøket',
+        innhold:
+            'I kandidatsøket i rekrutteringsbistand kan du nå filtrere og få frem kandidater som er permitterte. Data om permittering hentes fra situasjonen brukerne oppga i registreringen.',
+    },
+    {
         dato: tilDato(6, 4, 2020),
         tittel: 'Nå kan du slette kandidater fra en kandidatliste',
         innhold:
