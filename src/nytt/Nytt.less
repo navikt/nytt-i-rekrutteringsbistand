@@ -81,17 +81,29 @@
 
     &__artikkel {
         padding: 1rem 2rem;
+
+        &--ulest {
+            background-color: #e3edf8;
+        }
     }
 
     &__artikkel:not(:last-child) {
         border-bottom: 1px solid lightgray;
     }
 
-    &__artikkeltittel {
-        margin-bottom: 0.125rem;
+    &__artikkeltittel.typo-undertittel {
+        margin-bottom: 1rem;
     }
 
     &__artikkelinnhold {
-        margin-top: 1rem;
+        h3 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        p {
+            margin-top: 0;
+        }
     }
 }

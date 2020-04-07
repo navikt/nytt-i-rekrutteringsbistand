@@ -7,13 +7,36 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
-        dato: tilDato(6, 4, 2020, 13, 30),
+        dato: tilDato(7, 4, 2020),
+        tittel: 'Nye filtreringsmuligheter i kandidatsøket',
+        innhold: (
+            <>
+                <p>
+                    I kandidatsøket i rekrutteringsbistand er det kommet to nye
+                    filtreringsmuligheter.
+                </p>
+                <h3>Permitterte</h3>
+                <p>
+                    Det er mulig å søke frem kandidater som er permitterte. Informasjon om
+                    permittering hentes fra situasjonen brukerne oppga i registreringen.
+                </p>
+                <h3>Tilgjengelighet</h3>
+                <p>
+                    Du kan filtrere på når kandidatene er ledig. Informasjon om tilgjengelighet
+                    hentes fra jobbprofilen. Du kan filtrere på om brukerne har registrert om er
+                    ledig nå, om tre måneder eller etter nærmere avtale.
+                </p>
+            </>
+        ),
+    },
+    {
+        dato: tilDato(6, 4, 2020),
         tittel: 'Nå kan du slette kandidater fra en kandidatliste',
         innhold:
             'Kandidater som slettes blir arkivert, og du kan enkelt søke frem en oversikt over hvilke kandidater som er slettet. Det er også mulig å angre sletting, og flytte kandidaten tilbake på kandidatlisten.',
     },
     {
-        dato: tilDato(3, 4, 2020, 16),
+        dato: tilDato(3, 4, 2020),
         tittel: 'Rekrutteringsbistand på Yammer',
         innhold:
             'Rekrutteringsbistand har egen gruppe på Yammer. Der kan behov for ny eller endret funksjonalitet i verktøyet meldes inn og bli diskutert. Feil i rekrutteringsbistand skal meldes i porten.',
