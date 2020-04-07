@@ -1,21 +1,22 @@
 import { useState, useEffect } from 'react';
 import { Nyhet } from './Nytt';
 
-const brukerHarUlesteNyheter = (nyheter: Nyhet[], antallLesteNyheter: number) => {
+const hentAntallUlesteNyheter = (nyheter: Nyhet[], antallLesteNyheter: number) => {
     if (nyheter.length === 0) {
-        return false;
+        return 0;
     }
 
-    return nyheter.length > antallLesteNyheter;
+    return nyheter.length - antallLesteNyheter;
 };
 
 const LOCAL_STORAGE_KEY = 'antallLesteNyheter';
 
-const useHarUlesteNyheter = (
+const useAntallUlesteNyheter = (
     nyheter: Nyhet[],
     onFørsteBesøk: () => void
-): [boolean, () => void] => {
-    const [harUlesteNyheter, setHarUlesteNyheter] = useState<boolean>(false);
+): [number, number, () => void] => {
+    const [antallUlesteNyheter, setAntallUlesteNyheter] = useState<number>(0);
+    const [antallUlesteVedSidelast, setAntallUlesteVedSidelast] = useState<number>(0);
 
     useEffect(() => {
         try {
@@ -23,10 +24,17 @@ const useHarUlesteNyheter = (
 
             if (localStorageValue) {
                 const antallLesteFraLocalStorage = Number.parseInt(JSON.parse(localStorageValue));
-                setHarUlesteNyheter(brukerHarUlesteNyheter(nyheter, antallLesteFraLocalStorage));
+                const antallUlesteNyheter = hentAntallUlesteNyheter(
+                    nyheter,
+                    antallLesteFraLocalStorage
+                );
+
+                setAntallUlesteNyheter(antallUlesteNyheter);
+                setAntallUlesteVedSidelast(antallUlesteNyheter);
             } else {
                 onFørsteBesøk();
-                setHarUlesteNyheter(true);
+                setAntallUlesteNyheter(1);
+                setAntallUlesteVedSidelast(1);
             }
         } catch (error) {
             console.error('Kunne ikke hente fra local storage:', error);
@@ -34,7 +42,7 @@ const useHarUlesteNyheter = (
     }, [nyheter]);
 
     const markerSomLest = () => {
-        setHarUlesteNyheter(false);
+        setAntallUlesteNyheter(0);
 
         try {
             const antallLesteNyheter = JSON.stringify(nyheter.length);
@@ -44,7 +52,7 @@ const useHarUlesteNyheter = (
         }
     };
 
-    return [harUlesteNyheter, markerSomLest];
+    return [antallUlesteNyheter, antallUlesteVedSidelast, markerSomLest];
 };
 
-export default useHarUlesteNyheter;
+export default useAntallUlesteNyheter;
