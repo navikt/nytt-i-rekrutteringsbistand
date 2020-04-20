@@ -7,7 +7,7 @@ const printDato = (dato: Date) =>
         ? dato.toLocaleDateString('no-NB', {
               day: 'numeric',
               month: 'short',
-              year: 'numeric',
+              year: 'numeric'
           })
         : dato.toISOString();
 
