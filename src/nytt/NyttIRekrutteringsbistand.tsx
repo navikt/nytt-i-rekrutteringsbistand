@@ -7,6 +7,36 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(27, 4, 2020),
+        tittel: 'Nå kan du registrere kandidater som midlertidig utilgjengelig',
+        innhold: (
+            <>
+                <p>
+                    For å få bedre oversikt over hvilke kandidater som er tilgjengelig for jobb, har
+                    du mulighet til å registrere kandidater som utilgjengelig for en periode i
+                    CV-visningen i Rekrutteringsbistand. Du kan maksimalt sette personer som
+                    utilgjengelig i en måned.
+                </p>
+                <p>
+                    Status som midlertidig utilgjengelig skal kun skal settes i dialog med bruker,
+                    og kandidaten skal informeres om at hun/han får denne statusen. Statusen vil
+                    kunne ses av alle som bruker kandidatsøket og årsak til utilgjengelighet skal
+                    ikke oppgis.
+                </p>
+                <p>
+                    Etterhvert vil du også kunne filtrere på kandidater som har status som
+                    midlertidig utilgjengelig.
+                </p>
+            </>
+        ),
+    },
+    {
+        dato: tilDato(27, 4, 2020),
+        tittel: 'Søk på navn i en kandidatliste',
+        innhold:
+            'Nå kan du søke på navn i en kandidatliste. Det gjør at du lettere kan finne igjen personer som er lagt på en kandidatliste.',
+    },
+    {
         dato: tilDato(22, 4, 2020),
         tittel: 'Informasjon om kandidatens veileder',
         innhold:
