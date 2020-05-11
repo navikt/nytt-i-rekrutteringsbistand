@@ -21,9 +21,9 @@ const nyheter = [
                 <p>
                     På en stilling kan du kopiere en lenke til stillingsannonsen. «Kopier stillingslenke» 
                     har tidligere vært tilgjengelig lenger nede på stillingen, men er nå flyttet og står 
-                    ved siden av «Rediger stilling» og «Skriv ut»
+                    ved siden av «Rediger stilling» og «Skriv ut».
                 </p>
-                <h3>«Til toppen» pil er lagt til på kandidatsøk og kandidatlister.</h3>
+                <h3>«Til toppen» pil er lagt til på kandidatsøk og kandidatlister</h3>
                 <p>
                     Dette gjør at du ikke trenger å skrolle like mye.
                 </p>
