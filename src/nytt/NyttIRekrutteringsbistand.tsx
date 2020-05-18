@@ -7,30 +7,38 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(18, 5, 2020),
+        tittel: 'Nå kan du se hvilke kandidater som allerede ligger i kandidatlisten',
+        innhold:
+            'Om du kommer til kandidatsøket via en kandidatliste eller en stilling, vil du nå se et nytt ikon. Dette ikonet forteller deg at kandidaten allerede ligger i kandidatlisten, og du trenger ikke bruke tid på kandidater du allerede har vurdert som aktuelle.',
+    },
+    {
         dato: tilDato(11, 5, 2020),
         tittel: 'Nye endringer',
         innhold: (
             <>
                 <h3>Tilpassing til små skjermer</h3>
                 <p>
-                    Rekrutteringsbistand fungerer nå bedre på mindre skjermer. Vi har gjort justeringer 
-                    på blant annet kandidatlister og registrering av stilling. I tillegg er kontrasten 
-                    på teksten forbedret.
+                    Rekrutteringsbistand fungerer nå bedre på mindre skjermer. Vi har gjort
+                    justeringer på blant annet kandidatlister og registrering av stilling. I tillegg
+                    er kontrasten på teksten forbedret.
                 </p>
                 <h3>Ny knapp - kopier stilingslenke</h3>
                 <p>
-                    På en stilling kan du kopiere en lenke til stillingsannonsen. «Kopier stillingslenke» 
-                    har tidligere vært tilgjengelig lenger nede på stillingen, men er nå flyttet og står 
-                    ved siden av «Rediger stilling» og «Skriv ut».
+                    På en stilling kan du kopiere en lenke til stillingsannonsen. «Kopier
+                    stillingslenke» har tidligere vært tilgjengelig lenger nede på stillingen, men
+                    er nå flyttet og står ved siden av «Rediger stilling» og «Skriv ut».
                 </p>
                 <h3>«Til toppen» pil er lagt til på kandidatsøk og kandidatlister</h3>
-                <p>
-                    Dette gjør at du ikke trenger å skrolle like mye.
-                </p>
-                <h3>Ny kolonne i kandidatlisten som viser når (hvilken dato) en kandidat ble lagt til listen</h3>
+                <p>Dette gjør at du ikke trenger å skrolle like mye.</p>
+                <h3>
+                    Ny kolonne i kandidatlisten som viser når (hvilken dato) en kandidat ble lagt
+                    til listen
+                </h3>
                 <h3>Link fra CV til kandidatliste</h3>
                 <p>
-                    Når du har lagt en kandidat i en kandidatliste fra CV-visning, kan du nå gå direkte til kandidatlisten.
+                    Når du har lagt en kandidat i en kandidatliste fra CV-visning, kan du nå gå
+                    direkte til kandidatlisten.
                 </p>
             </>
         ),
