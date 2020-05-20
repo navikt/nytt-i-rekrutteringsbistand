@@ -7,6 +7,24 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(20, 5, 2020),
+        tittel: 'Filtrering på status i en kandidatliste',
+        innhold: (
+            <>
+                <p>
+                    Nå kan du filtrere på status i en kandidatliste. Det hjelper deg til å ha
+                    oversikt over mange kandidater som har status; vurderes, aktuell, ikke aktuell
+                    eller ikke interessert.
+                </p>
+                <p>
+                    Øverst i en kandidatliste som er tilknyttet en stilling, får du i tillegg
+                    informasjon om hvor mange som har status aktuell og hvor mange som er presentert
+                    for arbeidsgiver.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(18, 5, 2020),
         tittel: 'Nå kan du se hvilke kandidater som allerede ligger i kandidatlisten',
         innhold:
