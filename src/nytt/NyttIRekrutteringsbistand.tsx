@@ -7,6 +7,25 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(25, 5, 2020),
+        tittel: 'Historikk og filtrering på utfall i en kandidatliste',
+        innhold: (
+            <>
+                <p>
+                    På CV-visningen har det nå kommet en ny fane som heter historikk. Her kan du se
+                    hvilke kandidatlister en kandidat er lagt på, hvilken status kandidaten har og
+                    om han eller hun har blitt presentert for arbeidsgiver. Historikken vil hjelper
+                    deg til å få god oversikt over den enkelte kandidat.
+                </p>
+                <p>
+                    Du har også fått mulighet til å filtrere en kandidatliste på utfall (ikke
+                    presentert og presentert). Dermed kan du filtrere en kandidatliste både på
+                    status og på utfall.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(20, 5, 2020),
         tittel: 'Filtrering på status i en kandidatliste',
         innhold: (
