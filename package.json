@@ -23,6 +23,7 @@
         "build": "run-s build:webpack build:declarations"
     },
     "dependencies": {
+        "amplitude-js": "^6.2.0",
         "classnames": "^2.2.6",
         "lodash.throttle": "^4.1.1",
         "nav-frontend-js-utils": "^1.0.8",
@@ -40,6 +41,7 @@
         "@babel/preset-env": "^7.8.4",
         "@babel/preset-react": "^7.8.3",
         "@babel/preset-typescript": "^7.8.3",
+        "@types/amplitude-js": "^5.11.0",
         "@types/react": "^16.9.19",
         "@types/react-dom": "^16.9.5",
         "babel-loader": "^8.0.6",

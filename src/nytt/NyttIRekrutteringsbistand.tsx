@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { PopoverProps } from 'nav-frontend-popover';
 import Nytt from './Nytt';
+import { sendEvent } from './amplitude';
 
 const tilDato = (dag: number, måned: number, år: number, timer: number = 0, minutter: number = 0) =>
     new Date(år, måned - 1, dag, timer, minutter);
@@ -216,7 +217,15 @@ const nyheter = [
 type Props = Partial<PopoverProps>;
 
 const NyttIRekrutteringsbistand: FunctionComponent<Props> = (popoverProps: Props) => (
-    <Nytt åpneVedFørsteBesøk navn="Rekrutteringsbistand" nyheter={nyheter} {...popoverProps} />
+    <Nytt
+        åpneVedFørsteBesøk
+        åpnetNyheter={(antallUlesteNyheter) =>
+            sendEvent('nyheter', 'åpne', { antallUlesteNyheter })
+        }
+        navn="Rekrutteringsbistand"
+        nyheter={nyheter}
+        {...popoverProps}
+    />
 );
 
 export default NyttIRekrutteringsbistand;

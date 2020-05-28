@@ -17,10 +17,11 @@ interface Props extends Partial<PopoverProps> {
     navn: string;
     nyheter: Nyhet[];
     åpneVedFørsteBesøk?: boolean;
+    åpnetNyheter?: (antallUlesteNyheter: number) => void;
 }
 
 const Nytt: FunctionComponent<Props> = (props) => {
-    const { navn, nyheter, åpneVedFørsteBesøk = false, ...popoverProps } = props;
+    const { navn, nyheter, åpneVedFørsteBesøk = false, åpnetNyheter, ...popoverProps } = props;
 
     const [popoverAnker, setPopoverAnker] = useState<HTMLElement | undefined>();
     const [erÅpnet, setErÅpnet] = useState<boolean>(false);
@@ -45,6 +46,10 @@ const Nytt: FunctionComponent<Props> = (props) => {
 
             if (!erÅpnet) {
                 setErÅpnet(true);
+
+                if (åpnetNyheter) {
+                    åpnetNyheter(antallUlesteNyheter);
+                }
             }
         }
     };
