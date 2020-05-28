@@ -8,7 +8,11 @@ const Utviklingsapp: FunctionComponent = () => {
     return (
         <main className="utviklingsapp">
             <Sidetittel className="utviklingsapp__tittel">Utviklingsapp</Sidetittel>
-            <NyttIRekrutteringsbistand />
+            <NyttIRekrutteringsbistand
+                onÅpneNyheter={(antallUleste) => {
+                    console.log(`Åpnet nyheter med ${antallUleste} uleste.`);
+                }}
+            />
         </main>
     );
 };
