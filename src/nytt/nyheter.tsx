@@ -5,6 +5,12 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(4, 6, 2020),
+        tittel: 'Filtrering på alder',
+        innhold:
+            'I kandidatsøket har du nå mulighet til å filtrere på alder. Du legger selv inn hvilket aldersintervall du vil ha i søket. Det gir en ny mulighet til målrettede søk etter kandidater innenfor prioriterte målgrupper.',
+    },
+    {
         dato: tilDato(25, 5, 2020),
         tittel: 'Historikk og filtrering på utfall i en kandidatliste',
         innhold: (
