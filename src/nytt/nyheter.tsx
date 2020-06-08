@@ -5,6 +5,12 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(8, 6, 2020),
+        tittel: 'Nå kan du søke etter en kandidat',
+        innhold:
+            'Øverst i kandidatsøket i fritekstsøket, kan du nå søke på fødselsnummer og få treff på kandidaten du leter etter. Du vil kun få treff på kandidater som er synlige i Rekrutteringsbistand.',
+    },
+    {
         dato: tilDato(4, 6, 2020),
         tittel: 'Filtrering på alder',
         innhold:
