@@ -5,6 +5,31 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(25, 7, 2020),
+        tittel: 'Formidlinger skal nå registreres i Rekrutteringsbistand',
+        innhold: (
+            <>
+                <p>
+                    Registrering av formidlinger (presentert for arbeidsgiver og fått jobb), skal nå
+                    gjøres i Rekrutteringsbistand, og ikke i Arena.
+                </p>
+                <p>
+                    I feltet «utfall» på en kandidatliste, kan eier av kandidatlisten endre utfall
+                    fra «Presentert» til «Fått jobb» når en person er formidlet. Utfallet
+                    «Presentert» kommer automatisk når du deler en CV med arbeidsgiver, men du kan
+                    også sette utfallet manuelt.
+                </p>
+                <p>
+                    For at utfallet «Fått jobb» kan registreres, er det en forutsetning at NAV har
+                    hatt dialog med arbeidsgiver i forkant, og har presentert en eller flere
+                    kandidater. NAV må også få bekreftet at det er inngått et lønnet arbeidsforhold
+                    mellom kandidat og arbeidsgiver for at en formidling («Fått jobb») kan
+                    registreres.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(8, 6, 2020),
         tittel: 'Nå kan du søke etter en kandidat',
         innhold:
