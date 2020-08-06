@@ -25,7 +25,7 @@
     "dependencies": {
         "classnames": "^2.2.6",
         "lodash.throttle": "^4.1.1",
-        "nav-frontend-js-utils": "^1.0.8",
+        "nav-frontend-js-utils": "^1.0.9",
         "nav-frontend-popover": "0.0.22",
         "nav-frontend-popover-style": "0.0.2",
         "nav-frontend-typografi": "^2.0.17",
