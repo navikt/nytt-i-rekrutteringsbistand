@@ -5,6 +5,23 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(8, 9, 2020),
+        tittel: 'Formidling på kandidater som ikke er synlige i Rekrutteringsbistand',
+        innhold: (
+            <>
+                <p>
+                    Det er nå mulig å registrere at personer som ikke er synlige i
+                    Rekrutteringsbistand er blitt presentert eller har fått jobb. Dette gjør du ved
+                    å gå til den aktuelle kandidatlisten. Trykk på «Legg til kandidat» og skriv inn
+                    fødselsnummeret til personen. Huk av for presentert og/eller fått jobb og trykk
+                    på «Lagre». Formidlingen er nå registrert. Det er ikke mulig å registrere
+                    formidling på brukere med kode 6/7.
+                </p>
+                <p>Funksjonaliteten gjelder kun kandidatlister som er knyttet til en stilling.</p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(25, 7, 2020),
         tittel: 'Formidlinger skal nå registreres i Rekrutteringsbistand',
         innhold: (
