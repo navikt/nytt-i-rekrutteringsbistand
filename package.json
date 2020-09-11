@@ -60,9 +60,9 @@
         "webpack-cli": "^3.3.12"
     },
     "peerDependencies": {
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "nav-frontend-core": "^4.0.11"
+        "react": "^16.13.0",
+        "react-dom": "^16.13.0",
+        "nav-frontend-core": "^5.0.0"
     },
     "browserslist": [
         "> 1% in NO",
