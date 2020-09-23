@@ -5,6 +5,12 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(23, 9, 2020),
+        tittel: 'Avslutt en kandidatliste',
+        innhold:
+            'Er du ferdig med et oppdrag? Nå kan du avslutte kandidatlisten. Gå inn på listen, øverst i høyre hjørnet vil du se status "åpen" eller "avsluttet". Når oppdraget er ferdig, avslutt listen slik at andre kan se at oppdraget er fullført.',
+    },
+    {
         dato: tilDato(8, 9, 2020),
         tittel: 'Formidling på kandidater som ikke er synlige i Rekrutteringsbistand',
         innhold: (
