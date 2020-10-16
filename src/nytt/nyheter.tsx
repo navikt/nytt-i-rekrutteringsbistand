@@ -5,6 +5,19 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(16, 10, 2020),
+        tittel: 'Ny SMS-mal til jobbarrangement',
+        innhold: (
+            <>
+                <p>
+                    Skal du sende SMS til en kandidat kan du nå velge en mal for jobbarrangement. 
+                    Denne malen kan brukes til for eksempel jobbmesser.
+                </p>
+                <p>Hvis jobbmessen fører til at en eller flere kandidater får jobb, registrer formidlingen på stillingen du allerede har opprettet.</p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(23, 9, 2020),
         tittel: 'Avslutt en kandidatliste',
         innhold:
