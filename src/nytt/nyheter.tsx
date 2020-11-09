@@ -5,15 +5,34 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(9, 11, 2020),
+        tittel: 'Nå kan se du hvor mange personer som har fått jobb i Rekrutteringsbistand.',
+        innhold: (
+            <>
+                <p>
+                    På forsiden i Rekrutteringsbistand kan du nå se hvor mange personer som har fått
+                    jobb og hvor mange som er presentert for en stilling hos arbeidsgiver.
+                    Oversikten viser resultater fra det kontoret du er innlogget på, og viser alltid
+                    gjeldende status. Det gir en enkel oversikt over kontorets resultater for alle
+                    som benytter Rekrutteringsbistand, og kan benyttes som et verktøy for kontoret i
+                    markedsarbeidet.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(16, 10, 2020),
         tittel: 'Ny SMS-mal til jobbarrangement',
         innhold: (
             <>
                 <p>
-                    Skal du sende SMS til en kandidat kan du nå velge en mal for jobbarrangement. 
+                    Skal du sende SMS til en kandidat kan du nå velge en mal for jobbarrangement.
                     Denne malen kan brukes til for eksempel jobbmesser.
                 </p>
-                <p>Hvis jobbmessen fører til at en eller flere kandidater får jobb, registrer formidlingen på stillingen du allerede har opprettet.</p>
+                <p>
+                    Hvis jobbmessen fører til at en eller flere kandidater får jobb, registrer
+                    formidlingen på stillingen du allerede har opprettet.
+                </p>
             </>
         ),
     },
