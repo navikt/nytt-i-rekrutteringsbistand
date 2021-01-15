@@ -5,6 +5,24 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(15, 1, 2021),
+        tittel: 'Sorteringsmuligheter i kandidatlisteoversikten',
+        innhold: (
+            <>
+                <p>
+                    Nå kan du sortere i kandidatlisteoversikten.<br />
+                    Du kan raskt sortere på:
+                    <ul>
+                        <li>Dato for når kandidatliste er opprettet</li>
+                        <li>Navn på kandidatliste</li>
+                        <li>Antall kandidater på kandidatliste</li>
+                        <li>Veileder som har opprettet kandidatlisten</li>
+                    </ul>
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(9, 11, 2020),
         tittel: 'Nå kan se du hvor mange personer som har fått jobb i Rekrutteringsbistand.',
         innhold: (
@@ -282,7 +300,7 @@ const nyheter = [
         innhold: (
             <>
                 <p>
-                    Det er nå mulig å sende SMS til brukere som er tilknyttet en kandidatliste. Det
+                    Det er nå mulig å sende SMS til brukere som er tilknyttet en kandidatliste. Det
                     gjør at NAV enkelt kan varsle kandidater om stillinger hvor det haster å få
                     folk. SMS-varsling kan brukes både til offentlig utlyste stillinger og til
                     stillinger som er meldt direkte til NAV.
