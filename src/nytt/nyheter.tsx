@@ -5,12 +5,24 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(15, 2, 2021),
+        tittel: 'Nytt stillingssøk',
+        innhold: (
+            <p>
+                Vi har laget et nytt søk som gir flere muligheter for treff. Du kan nå søke etter
+                ord i selve annonsen, i tillegg til å søke på arbeidsgiver, annonsenummer og tittel
+                på stillingen.
+            </p>
+        ),
+    },
+    {
         dato: tilDato(15, 1, 2021),
         tittel: 'Sorteringsmuligheter i kandidatlisteoversikten',
         innhold: (
             <>
                 <p>
-                    Nå kan du sortere i kandidatlisteoversikten.<br />
+                    Nå kan du sortere i kandidatlisteoversikten.
+                    <br />
                     Du kan raskt sortere på:
                     <ul>
                         <li>Dato for når kandidatliste er opprettet</li>
