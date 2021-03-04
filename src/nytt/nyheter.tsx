@@ -5,6 +5,28 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(4, 3, 2021),
+        tittel: 'Lagre standardsøk i nytt stillingssøk',
+        innhold: (
+            <>
+                <p>
+                    Nå kan du lagre et standardsøk i det nye stillingssøket i Rekrutteringsbistand.
+                </p>
+                <p>Slik fungerer det</p>
+                <ul>
+                    <li>Legg inn søkeord og filter du ønsker å lagre.</li>
+                    <li>Trykk på «Lagre som standardsøk».</li>
+                    <li>
+                        Nå er søkekriteriene du har valgt lagret som et standardsøk. Det vil si at
+                        hver gang du bruker stillingssøket vil det være ferdig filtrert på de
+                        kriteriene du lagret.
+                    </li>
+                    <li>Du kan endre standardsøket når du vil.</li>
+                </ul>
+            </>
+        ),
+    },
+    {
         dato: tilDato(15, 2, 2021),
         tittel: 'Nytt stillingssøk',
         innhold: (
