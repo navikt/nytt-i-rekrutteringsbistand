@@ -5,6 +5,23 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(6, 4, 2021),
+        tittel: 'Finn kandidater med hull i CV-en',
+        innhold: (
+            <>
+                <p>
+                    Nå finner du et filter for «prioriterte målgrupper» i kandidatsøket. I første
+                    versjon kan du finne kandidater som har hull i CV-en. Dette filteret kan du for
+                    eksempel bruke i forbindelse med inkluderingsdugnaden.
+                </p>
+                <p>
+                    Beregning av hull i CV-en gjøres basert på informasjonen kandidaten har
+                    registrert i CV-en sin.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(4, 3, 2021),
         tittel: 'Lagre standardsøk i nytt stillingssøk',
         innhold: (
