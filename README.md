@@ -31,7 +31,8 @@ npm start
 Taggede commits (`vX.Y.Z`) vil publiseres til NPM med Github Actions. For å opprette en tagget commit:
 
 1. Oppgrader versjonsnummeret i package.json med `npm version patch/minor/major` (se https://docs.npmjs.com/cli/version). Bruk patch for små, non-breaking changes, minor for breaking changes og major for store oppgraderinger.
-2. Push den nye taggen (typ `git push origin vX.Y.Z`. Se `git tag` for liste over alle tagsene dine). _Dette trigger en publisering på Github Actions_.
+2. Commit, og opprett tag. Eksempel på tagging: git tag -a v1.2.16 -m "Legg til nyhet om aldersfilter"
+3. Push den nye taggen (typ `git push origin vX.Y.Z`. Se `git tag` for liste over alle tagsene dine). _Dette trigger en publisering på Github Actions_.
 
 Se [Workflows på GitHub](https://github.com/navikt/nytt-i-rekrutteringsbistand/actions) for byggstatus og [@navikt/nytt-i-rekrutteringsbistand på NPM](https://www.npmjs.com/package/@navikt/nytt-i-rekrutteringsbistand) for å sjekke om pakken ble publisert.
 

@@ -5,6 +5,19 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(15, 4, 2021),
+        tittel: 'Unge under 30 år og seniorer 50+',
+        innhold: (
+            <>
+                <p>
+                    I kandidatsøket under prioriterte målgrupper kan du nå huke av for unge under 30
+                    år eller seniorer 50+. Kombinerer du disse kriteriene med hull i CV-en, kan du
+                    for eksempel finne de som er under 30 år og har hull i CV-en.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(6, 4, 2021),
         tittel: 'Finn kandidater med hull i CV-en',
         innhold: (
