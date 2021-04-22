@@ -5,6 +5,18 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(22, 4, 2021),
+        tittel: 'Innsatsgrupper er koblet på formidlingstall',
+        innhold: (
+            <>
+                <p>
+                    Nå kan du hvor mange personer som har fått jobb med bistand fra NAV, og hvilken innsatsgruppe de har.
+                    Rapporten heter "RB121 Formidlinger Fått jobben. Personkjennetegn. Tidsserie måned". Du finner den i Datavarehuset.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(15, 4, 2021),
         tittel: 'Unge under 30 år og seniorer 50+',
         innhold: (
