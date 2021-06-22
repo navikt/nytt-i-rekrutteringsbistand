@@ -5,6 +5,23 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(22, 6, 2021),
+        tittel: 'Endring i kandidatlister',
+        innhold: (
+            <>
+                <p>
+                    Nå er det enklere å se status og få oversikt over hendelser til kandidater på en
+                    kandidatliste. Ved å benytte blyantsymbolet kan du enkelt endre status og
+                    se/registrere hendelser på kandidater i kandidatlisten.
+                </p>
+                <p>
+                    Endringen er en del av ny løsning for å kunne sende stillinger til aktuelle
+                    kandidater via aktivitetsplanen - som kommer etter sommeren.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(22, 4, 2021),
         tittel: 'Innsatsgrupper er koblet på formidlingstall',
         innhold: (
