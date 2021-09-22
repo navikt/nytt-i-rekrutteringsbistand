@@ -5,6 +5,25 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(22, 9, 2021),
+        tittel: 'Kategorier på stilling',
+        innhold: (
+            <>
+                <p>
+                    I Rekrutteringsbistand vil du nå måtte velge en kategori for stillingen. I
+                    første omgang gjelder dette stilling, arbeidstrening og formidling. Vi jobber
+                    med å avklare andre kategorier. Arbeidstrening skal i utgangspunktet ikke
+                    registreres, denne kategorien gjelder kun hvis du trenger å finne kandidater til
+                    en arbeidstrening.
+                </p>
+                <p>
+                    Dessverre må dere fortsatt registrere alle feltene uavhengig av hvilken kategori
+                    dere velger.
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(22, 6, 2021),
         tittel: 'Endring i kandidatlister',
         innhold: (
@@ -27,8 +46,9 @@ const nyheter = [
         innhold: (
             <>
                 <p>
-                    Nå kan du hvor mange personer som har fått jobb med bistand fra NAV, og hvilken innsatsgruppe de har.
-                    Rapporten heter "RB121 Formidlinger Fått jobben. Personkjennetegn. Tidsserie måned". Du finner den i Datavarehuset.
+                    Nå kan du hvor mange personer som har fått jobb med bistand fra NAV, og hvilken
+                    innsatsgruppe de har. Rapporten heter "RB121 Formidlinger Fått jobben.
+                    Personkjennetegn. Tidsserie måned". Du finner den i Datavarehuset.
                 </p>
             </>
         ),
