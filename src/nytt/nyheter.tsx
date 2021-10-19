@@ -5,6 +5,30 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(19, 10, 2021),
+        tittel: 'Rekrutteringsbistand + aktivitetsplanen',
+        innhold: (
+            <>
+                <p>
+                    Nå kan du dele stillinger med kandidater i aktivitetsplanen, og få svar. Gå til
+                    kandidatlisten, og del stillingen med aktuelle kandidater. Kandidatene vil bli
+                    varslet på SMS om et aktivitetskort i aktivitetsplanen.
+                </p>
+                <p>
+                    På aktivitetskortet kan kandidatene svare på om de ønsker at CV-en skal deles
+                    med arbeidsgiver. Du vil se svarene i kandidatlisten.{' '}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://navno.sharepoint.com/sites/fag-og-ytelser-arbeid-markedsarbeid/SitePages/Del-stillinger-med-kandidater-i-Aktivitetsplanen.aspx">
+                        Les om hvordan du deler en stilling med kandidater
+                    </a>
+                    .
+                </p>
+            </>
+        ),
+    },
+    {
         dato: tilDato(22, 9, 2021),
         tittel: 'Kategorier på stilling',
         innhold: (
