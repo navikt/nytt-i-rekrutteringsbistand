@@ -5,6 +5,17 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(23, 11, 2021),
+        tittel: 'Kontaktinformasjon på stillingsannonse',
+        innhold: (
+            <p>
+                Kontaktinformasjonen er fjernet fra stillingsannonsen som vises for arbeidssøkerne.
+                Kandidatene blir informert om at de kan ta kontakt i dialogen i aktivitetsplanen
+                hvis de har spørsmål.
+            </p>
+        ),
+    },
+    {
         dato: tilDato(19, 10, 2021),
         tittel: 'Rekrutteringsbistand + aktivitetsplanen',
         innhold: (
