@@ -5,6 +5,17 @@ const tilDato = (dag: number, måned: number, år: number, timer: number = 0, mi
 
 const nyheter = [
     {
+        dato: tilDato(10, 3, 2022),
+        tittel: 'Rekrutteringsbistand har fått ny URL',
+        innhold: (
+            <p>
+                URL-en er oppdatert i Modia-dekoratøren, men hvis du har lagret Rekrutteringsbistand
+                som bokmerke må du huske å oppdatere denne. Den gamle URL-en vil slutte å fungere om
+                kort tid.
+            </p>
+        ),
+    },
+    {
         dato: tilDato(23, 11, 2021),
         tittel: 'Kontaktinformasjon på stillingsannonse',
         innhold: (
