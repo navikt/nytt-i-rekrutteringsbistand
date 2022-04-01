@@ -2,6 +2,10 @@
 
 Vis endringer og andre nyheter i Rekrutteringsbistand-appene
 
+## ⚠️ Arkivert ⚠️
+
+Dette repoet er arkivert per 01.04.2022, og koden er flyttet til [rekrutteringsbistand-container](https://github.com/navikt/rekrutteringsbistand-container/pull/59). Før var "nytt-i-rekrutteringsbistand" en komponent som ble brukt av flere applikasjoner, og da ble den publisert som en pakke til NPM. Nå brukes den bare av container-applikasjonen, og er dermed flyttet dit.
+
 ## Bruk
 
 ### Installer komponenten
